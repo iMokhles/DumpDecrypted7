@@ -1,17 +1,22 @@
 Dumps decrypted iPhone Applications to a file - better solution than those GDB scripts for non working GDB versions
 (C) Copyright 2011 Stefan Esser
 
+ReadMe and MakeFile Edited By : @iMokhles 
 
 Compile:
 
-First adjust the Makefile if you have a different iOS SDK installed.
-
-And then just: make
+just: make
 
 
 Usage:
+Copy dumpdecrypted.dylib to your iDevice 
 
-iPod:~ root# DYLD_INSERT_LIBRARIES=dumpdecrypted.dylib /var/mobile/Applications/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/Scan.app/Scan
+Example:
+
+/var/mobile/dumpdecrypted.dylib
+
+Then SSh into your iDevice using Terminal Through mac or MobileTerminal Through your iDevice
+iPod:~ root# DYLD_INSERT_LIBRARIES=/var/mobile/dumpdecrypted.dylib /var/mobile/Applications/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/Scan.app/Scan
 mach-o decryption dumper
 
 DISCLAIMER: This tool is only meant for security research purposes, not for application crackers.
